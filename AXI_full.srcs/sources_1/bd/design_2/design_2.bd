@@ -1,0 +1,124 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6A0E9E34E12545B9",
+      "device": "xcku060_CIV-ffva1156-2-e",
+      "gen_directory": "../../../../AXI_full.gen/sources_1/bd/design_2",
+      "name": "design_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "myaxi_0": ""
+    },
+    "ports": {
+      "m00_axi_aclk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "m00_axi_aresetn_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_2_m00_axi_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "m00_axi_aresetn_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "m00_axi_init_axi_txn_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "myaxi_0": {
+        "vlnv": "xilinx.com:user:myaxi:1.0",
+        "xci_name": "design_2_myaxi_0_0",
+        "xci_path": "ip\\design_2_myaxi_0_0\\design_2_myaxi_0_0.xci",
+        "inst_hier_path": "myaxi_0",
+        "interface_ports": {
+          "M00_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "M00_AXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "M00_AXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "myaxi_0_M00_AXI": {
+        "interface_ports": [
+          "myaxi_0/S00_AXI",
+          "myaxi_0/M00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "m00_axi_aclk_0_1": {
+        "ports": [
+          "m00_axi_aclk_0",
+          "myaxi_0/m00_axi_aclk",
+          "myaxi_0/s00_axi_aclk"
+        ]
+      },
+      "m00_axi_aresetn_0_1": {
+        "ports": [
+          "m00_axi_aresetn_0",
+          "myaxi_0/m00_axi_aresetn",
+          "myaxi_0/s00_axi_aresetn"
+        ]
+      },
+      "m00_axi_init_axi_txn_0_1": {
+        "ports": [
+          "m00_axi_init_axi_txn_0",
+          "myaxi_0/m00_axi_init_axi_txn"
+        ]
+      }
+    }
+  }
+}
